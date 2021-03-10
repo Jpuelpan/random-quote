@@ -12,6 +12,7 @@ MARGIN_LEFT = 80
 MARGIN_RIGHT = 80
 
 def handler(event, context):
+    print(json.dumps(event))
     f = open("quotes.json", "r")
     quotes = json.loads(f.read())
     quote = random.choice(quotes)
